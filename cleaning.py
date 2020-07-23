@@ -3,10 +3,10 @@ from pymongo import MongoClient
 import pandas as pd
 from flatten_json import flatten
 
-# Run Mongo - do I do this?
-#client = MongoClient('localhost', 27017)
-#db = client['schools']
-#clean = db['clean']
+# Run Mongo
+client = MongoClient('localhost', 27017)
+db = client['schools']
+clean = db['clean']
 
 # Create a dataframe
 
