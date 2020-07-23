@@ -8,14 +8,6 @@ import seaborn as sns
 # Read in csv
 df = pd.read_csv('combined_df.csv')
 
-# Change string numbers to floats
-df['collegeEnrollmentData_state_average'] = df['collegeEnrollmentData_state_average'].str.strip('%')
-df['collegeEnrollmentData_school_value'] = df['collegeEnrollmentData_school_value'].str.strip('%')
-df['percentLowIncome'] = df['percentLowIncome'].str.strip('%')
-df['collegeEnrollmentData_state_average'] = df['collegeEnrollmentData_state_average'].astype(float)
-df['collegeEnrollmentData_school_value'] = df['collegeEnrollmentData_school_value'].astype(float)
-df['percentLowIncome'] = df['percentLowIncome'].astype(float)
-
 # Visualize college readiness rating distribution
 def college_readiness_distribution(df):
     sns.set_style("darkgrid")

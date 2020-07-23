@@ -71,5 +71,15 @@ combined_df['id'].drop_duplicates(inplace=True)
 # Check for duplicates
 combined_df['id'].duplicated().value_counts()
 
+# Change string numbers to floats
+combined_df['collegeEnrollmentData_state_average'] = combined_df['collegeEnrollmentData_state_average'].str.strip('%')
+combined_df['collegeEnrollmentData_school_value'] = combined_df['collegeEnrollmentData_school_value'].str.strip('%')
+combined_df['percentLowIncome'] = combined_df['percentLowIncome'].str.strip('%')
+
+# Change string numbers to floats
+combined_df['collegeEnrollmentData_state_average'] = combined_df['collegeEnrollmentData_state_average'].astype(float)
+combined_df['collegeEnrollmentData_school_value'] = combined_df['collegeEnrollmentData_school_value'].astype(float)
+combined_df['percentLowIncome'] = combined_df['percentLowIncome'].astype(float)
+
 # Save to csv
 combined_df.to_csv('combined_df.csv')

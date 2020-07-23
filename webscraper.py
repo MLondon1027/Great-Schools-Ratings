@@ -86,7 +86,7 @@ def clean_round_one(dataframes):
     for df in dataframes:
         df.drop(cols_to_del, axis=1, inplace=True)
 
-cols_to_del = ['assigned', 'address_street1', 'address_street2', 'address_zip', 'address_city', 
+cols_to_del = ['assigned', 'address_street1', 'address_street2', 'address_city', 
                'lat', 'lon', 'pinned', 'testScoreRatingForEthnicity', 'highlighted']
 dataframes = [df_h_0, df_h_1, df_h_2, df_h_3, df_h_4]
 clean_round_one(dataframes)
