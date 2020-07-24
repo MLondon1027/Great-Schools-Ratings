@@ -20,6 +20,15 @@ There were five separate dataframes, because some districts had up to five high 
 
 ## Exploratory Data Analysis
 
-[Test Score Rating Distribution](/Images/final_test_scores_dist.png)
+![Test Score Rating Distribution](/Images/final_test_scores_dist.png)
+
+We can see that the test score rating distribution is normally distributed and that the mean and median are nearly the same (5.33 and 5, respectively).
+
+![Percent Income Distribution](Images/final_percent_LI_dist.png)
+
+
+![Test Score Rating Boxplot](Images/final_test_score_boxplot.png)
+
+
 
 
