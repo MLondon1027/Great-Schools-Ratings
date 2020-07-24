@@ -20,7 +20,7 @@ There were five separate dataframes, because some districts had up to five high 
 
 ## Exploratory Data Analysis
 
-The total number of Texas high schools sampled was 1588.
+Number of Texas high schools sampled: 1588
 
 ![Test Score Rating Distribution](/Images/final_test_scores_dist.png)
 
