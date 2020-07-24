@@ -1,4 +1,4 @@
-# Great-Schools-Ratings
+# Great Schools Ratings: Do Majority vs. Minority Low Income Schools Have Different Test Outcomes?
 
 ## Background
 
@@ -20,15 +20,41 @@ There were five separate dataframes, because some districts had up to five high 
 
 ## Exploratory Data Analysis
 
+The total number of Texas high schools sampled was 1588.
+
 ![Test Score Rating Distribution](/Images/final_test_scores_dist.png)
 
 We can see that the test score rating distribution is normally distributed and that the mean and median are nearly the same (5.33 and 5, respectively).
 
 ![Percent Income Distribution](Images/final_percent_LI_dist.png)
 
+The median and mean percent of low income students is essentially the same at 53 and 52.77% respectively.
 
-![Test Score Rating Boxplot](Images/final_test_score_boxplot.png)
+![Student Test Score Ratings by % Low Income](Images/final_test_score_boxplot.png)
 
+This boxplot shows a pattern where as test score ratings increase, the percentage of lower income students decrease. However, there is an interesting uptick at schools with a test score rating of 10 (the best possible test score rating), the percentage of low income students spike.
 
+![Comparative Distribution of Test Score Ratings](Images/Comparative_Dist_Test_Scores.png)
 
+This overlapped histogram compares the distribution of test score ratings of majority (>=50% low income) low income schools and minority (<50% low income) low income schools. We can see that the mean test scores are lower for schools with a higher percentage of low income students.
 
+## Statistical Test
+I performed a statistical test with the goal of determining whether there was a difference in the mean test score ratings between majority and minority low income schools.
+
+Null hypothesis: There is no difference in mean test score ratings between majority low income schools and minority low income schools.
+Alternative hypothesis: There is a difference in mean test score ratings between majority low income schools and minority low income schools.
+Alpha: 0.05
+
+I performed a Welch's T Test and obtained a p value below the alpha, rejecting the null hypothesis.
+
+## Reflection of Results
+
+The results are unsurpising. It is a commonly held belief that schools in low income areas have lower testing performance. This could be due to a number of factors including parent education levels, teacher quality, spending per student, percentage of students who are learning English, and even crime rates. It would be interesting to further explore a number of these factors to inch closer to root causes in low test score ratings.
+
+## Technology Stack
+
+Python, Docker, MongoDB, Requests, BeautifulSoup, Json, Pandas, Numpy, Matplotlib, Seaborn, Scipy
+
+## Acknowledgements
+
+Thank you to Juliana Duncan, Dan Rupp, and Broderick Turner for your support throughout this project.
